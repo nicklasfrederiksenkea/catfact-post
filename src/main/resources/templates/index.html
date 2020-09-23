@@ -1,0 +1,28 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Cat-fact POST</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div id="form-container">
+					<form id="registration-form" action="/postCatFact" method="post">
+						<label for="catfact">CatFactLabel</label>
+						<input type="text" id="catfact" name="catfact"><br><br>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+			<div class="col">
+				<p th:text="${catFactToDisplay.getFactText()}"></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
